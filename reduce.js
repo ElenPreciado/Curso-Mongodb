@@ -14,4 +14,4 @@ function totalCantidad(precios){
 
 
 var resultado =  totalCantidad(precios)
-document.write(resultado);
+document.write("El total a pagar es $" + resultado);
