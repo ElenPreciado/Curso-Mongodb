@@ -80,3 +80,14 @@ const mayorMatricula = getNestedRecordsExample().filter(matricula, estudiante)=>
 
 
 //Obtener el correo del estudiante con matricula condicional
+
+
+
+const matriculaCondicional = getNestedRecordsExample()
+
+const encontrarCondicional = matriculaCondicional.find(encontrar=> encontrar.detalles.descripcion === "matricula condicional")
+
+const encontrarCorreo = encontrarCondicional.detalles.contacto.email
+
+
+document.write("<br> "+ "El correo del estudiante con matrícula condicional es: " + encontrarCorreo)
