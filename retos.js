@@ -69,17 +69,20 @@ const contactoTel = getNestedRecordsExample().filter(contacto=>
   
 
 
-const mayorMatricula = getNestedRecordsExample().filter(matricula, estudiante)=> 
+const mayorValor = getNestedRecordsExample().reduce((estudianteMayorValor, estudiante) =>
   {
-    const nombre = estudiante.detalles.nombre, 0
+    return estudiante.detalles.valorMatricula <estudianteMayorValor.detalles.valorMatricula 
+      ? estudianteMayorValor : estudiante;
+  }
+  
+  
+  ) 
 
-
-   
-  })
-
+document.write("<br> "+ "El estudiante con mayor valor de matrícula es: " + mayorValor.nombre + "<br> ")
 
 
 //Obtener el correo del estudiante con matricula condicional
+
 
 
 
